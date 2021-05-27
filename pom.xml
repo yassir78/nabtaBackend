@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.oracle</groupId>
-	<artifactId>dayliv</artifactId>
+	<artifactId>nabta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>nabtaBackend</name>
 	<description>Server Tuning Oracle Database</description>

@@ -28,14 +28,17 @@ public class NabtaBackendApplication {
 //			disease.setContenu("contenu 1");
 			disease.setLangue("fr");
 			disease.setNom("nom1");
+			disease.setLangue("fr");
 			disease.setNomScientifique("frScien");
 			diseaseDao.save(disease);
-			Stream.of("image1", "image2", "image3").forEach(image -> {
-				Image img = new Image();
-				img.setPath(image);
-				img.setDisease(disease);
-				imageDao.save(img);
-			});
+			Stream.of(
+					"https://firebasestorage.googleapis.com/v0/b/nabta-38d6a.appspot.com/o/disease%2Fimage%2F1622760802148?alt=media&token=5c2d8ad5-b621-40f8-9ee0-7f4932902a9d",
+					"https://firebasestorage.googleapis.com/v0/b/nabta-38d6a.appspot.com/o/disease%2Fimage%2F1622760802156?alt=media&token=784ed874-bfd5-4641-82aa-34405b95a0ed").forEach(image -> {
+						Image img = new Image();
+						img.setPath(image);
+						img.setDisease(disease);
+						imageDao.save(img);
+					});
 
 		};
 

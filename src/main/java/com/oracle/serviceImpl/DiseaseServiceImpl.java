@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.oracle.dao.DiseaseDao;
 import com.oracle.dao.ImageDao;
 import com.oracle.model.Disease;
+import com.oracle.model.Image;
 import com.oracle.service.DiseaseService;
 
 @Service
@@ -43,7 +44,7 @@ public class DiseaseServiceImpl implements DiseaseService {
 		// TODO Auto-generated method stub
 		if (disease != null) {
 			Disease savedDisease = diseaseDao.save(disease);
-			var images = disease.getImages();
+			List<Image> images = disease.getImages();
 			if (images != null) {
 				images.stream().forEach(image -> {
 					image.setDisease(savedDisease);

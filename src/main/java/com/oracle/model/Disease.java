@@ -26,7 +26,11 @@ public class Disease {
 	private long id;
 	private String nom;
 	private String nomScientifique;
-	private String contenu;
+	private String symptoms;
+	private String cycleImage;
+	private String conditions;
+	private String management;
+	private String control;
 	@OneToMany(mappedBy = "disease")
 	private List<Image> images;
 	private String langue;

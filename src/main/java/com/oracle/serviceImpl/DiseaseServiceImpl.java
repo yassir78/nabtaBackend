@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.oracle.dao.DiseaseDao;
+import com.oracle.dao.ImageDao;
 import com.oracle.model.Disease;
 import com.oracle.service.DiseaseService;
 
@@ -15,6 +16,8 @@ import com.oracle.service.DiseaseService;
 public class DiseaseServiceImpl implements DiseaseService {
 	@Autowired
 	private DiseaseDao diseaseDao;
+	@Autowired
+	private ImageDao imageDao;
 
 	@Override
 	public List<Disease> findAll() {
@@ -39,7 +42,14 @@ public class DiseaseServiceImpl implements DiseaseService {
 	public Disease addDisease(Disease disease) {
 		// TODO Auto-generated method stub
 		if (disease != null) {
-			return diseaseDao.save(disease);
+			Disease savedDisease = diseaseDao.save(disease);
+			var images = disease.getImages();
+			if (images != null) {
+				images.stream().forEach(image -> {
+					image.setDisease(savedDisease);
+					imageDao.save(image);
+				});
+			}
 		}
 		return null;
 	}
@@ -57,14 +67,14 @@ public class DiseaseServiceImpl implements DiseaseService {
 	@Transactional
 	public int delete(Long id) {
 		// TODO Auto-generated method stub
-		Disease disease =  diseaseDao.findById(id).orElse(null);
-		if(disease == null) {
+		Disease disease = diseaseDao.findById(id).orElse(null);
+		if (disease == null) {
 			return -1;
-		}else {
+		} else {
 			diseaseDao.deleteById(id);
 			return 1;
 		}
-		
+
 	}
 
 }

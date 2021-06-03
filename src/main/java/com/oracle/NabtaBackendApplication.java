@@ -25,7 +25,7 @@ public class NabtaBackendApplication {
 	public CommandLineRunner demo(DiseaseDao diseaseDao, ImageDao imageDao) {
 		return (args) -> {
 			Disease disease = new Disease();
-			disease.setContenu("contenu 1");
+//			disease.setContenu("contenu 1");
 			disease.setLangue("fr");
 			disease.setNom("nom1");
 			disease.setNomScientifique("frScien");

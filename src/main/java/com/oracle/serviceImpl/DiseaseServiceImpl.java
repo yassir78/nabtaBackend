@@ -1,6 +1,7 @@
 package com.oracle.serviceImpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -29,7 +30,8 @@ public class DiseaseServiceImpl implements DiseaseService {
 	@Override
 	public Disease findById(Long id) {
 		// TODO Auto-generated method stub
-		return diseaseDao.findById(id).get();
+		Disease disease =  diseaseDao.findById(id).orElse(null);
+		return disease;
 
 	}
 

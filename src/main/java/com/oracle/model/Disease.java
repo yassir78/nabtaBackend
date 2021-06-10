@@ -14,6 +14,9 @@ public class Disease {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	@Column(length = 3000)
+	private String nomClasse;
+	@Column(length = 3000)
 	private String nom;
 	@Column(length = 3000)
 	private String nomScientifique;
@@ -34,9 +37,10 @@ public class Disease {
 	public Disease() {
 	}
 
-	public Disease(long id, String nom, String nomScientifique, String symptoms, String cycleImage, String conditions,
+	public Disease(long id, String nomClasse, String nom, String nomScientifique, String symptoms, String cycleImage, String conditions,
 			String management, String control, List<Image> images, String langue) {
 		this.id = id;
+		this.nomClasse = nomClasse;
 		this.nom = nom;
 		this.nomScientifique = nomScientifique;
 		this.symptoms = symptoms;
@@ -54,6 +58,14 @@ public class Disease {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public String getNomClasse() {
+		return nomClasse;
+	}
+
+	public void setNomClasse(String nomClasse) {
+		this.nomClasse = nomClasse;
 	}
 
 	public String getNom() {
@@ -130,7 +142,7 @@ public class Disease {
 
 	@Override
 	public String toString() {
-		return "Disease [id=" + id + ", nom=" + nom + ", nomScientifique=" + nomScientifique + ", symptoms=" + symptoms
+		return "Disease [id=" + id+ ", nomClasse=" + nomClasse + ", nom=" + nom + ", nomScientifique=" + nomScientifique + ", symptoms=" + symptoms
 				+ ", cycleImage=" + cycleImage + ", conditions=" + conditions + ", management=" + management
 				+ ", control=" + control + ", images=" + images + ", langue=" + langue + "]";
 	}

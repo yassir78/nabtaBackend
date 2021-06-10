@@ -11,6 +11,8 @@ public interface DiseaseService {
 
 	public Disease findByNomAndLangue(String nom,String langue);
 
+	public Disease findByNomClasseAndLangue(String nomClasse,String langue);
+
 	public Disease addDisease(Disease disease);
 
 	public Disease update(Disease disease);

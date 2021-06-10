@@ -7,5 +7,8 @@ import com.oracle.model.Disease;
 
 @Repository
 public interface DiseaseDao extends JpaRepository<Disease, Long> {
+
 	public Disease findByNomAndLangue(String nom,String langue);
+
+	public Disease findByNomClasseAndLangue(String nomClasse,String langue);
 }

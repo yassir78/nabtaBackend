@@ -39,6 +39,10 @@ public class DiseaseRest {
 	public Disease findByNomAndLangue(@PathVariable String nom, @PathVariable String langue) {
 		return diseaseService.findByNomAndLangue(nom, langue);
 	}
+	@GetMapping("/nomClasse/{nomClasse}/langue/{langue}")
+	public Disease findByNomClasseAndLangue(@PathVariable String nomClasse, @PathVariable String langue) {
+		return diseaseService.findByNomClasseAndLangue(nomClasse, langue);
+	}
 
 	@PostMapping("/")
 	public Disease addDisease(@RequestBody Disease disease) {

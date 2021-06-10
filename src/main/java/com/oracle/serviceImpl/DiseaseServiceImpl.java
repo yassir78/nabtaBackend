@@ -36,6 +36,12 @@ public class DiseaseServiceImpl implements DiseaseService {
 	}
 
 	@Override
+	public Disease findByNomClasseAndLangue(String nomClasse, String langue) {
+		// TODO Auto-generated method stub
+		return diseaseDao.findByNomClasseAndLangue(nomClasse, langue);
+	}
+
+	@Override
 	public Disease findByNomAndLangue(String nom, String langue) {
 		// TODO Auto-generated method stub
 		return diseaseDao.findByNomAndLangue(nom, langue);

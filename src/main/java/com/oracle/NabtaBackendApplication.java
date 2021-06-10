@@ -136,7 +136,6 @@ public class NabtaBackendApplication {
 			potato_early_blight_en.setControl(
 					"     Application of products based on Bacillus subtilis or copper-based fungicides registered as organic can treat this disease. Always consider an integrated approach with preventive measures and biological treatments if available. There are numerous fungicides on the market for controlling early blight. Fungicides based on or combinations of azoxystrobin, pyraclostrobin, difenoconazole, boscalid, chlorothalonil, fenamidone, maneb, mancozeb, trifloxystrobin, and ziram can be used. Rotation of different chemical compounds is recommended. Apply treatments in a timely manner, taking into account weather conditions. Check carefully the preharvest interval at which you can harvest safely after the application of these products.");
 			potato_early_blight_en.setNomClasse("Potato Early Blight");
-			potato_early_blight_en.setNomClasse("Tomato Early Blight");
 			diseaseDao.save(potato_early_blight_en);
 			Stream.of(
 					"https://firebasestorage.googleapis.com/v0/b/nabta-38d6a.appspot.com/o/disease%2Fimage%2F1622766282259?alt=media&token=db3d6e7a-76f2-4e20-a177-8947942bbc23",
@@ -161,7 +160,7 @@ public class NabtaBackendApplication {
 					"     1. Use healthy seeds or more tolerant plants.\\n\\n2. Make sure the field has good air ventilation and well-drained soil.\\n\\n3. Monitor fields and remove infected plants and surrounding ones.\\n\\n4. Use rotations of two to three years to non-host crops.\\n\\n5. Destroy volunteer hosts in and around the field.\\n\\n6. Avoid excessive fertilization with nitrogen.\\n\\n7. Use plant fortifiers.\\n\\n8. Store tubers at low temperatures and with good ventilation.\\n\\n9. Destroy tubers and plant debris after harvest burying them two feet deep or feeding them to animals.");
 			potato_late_blight_en.setControl(
 					"     Apply copper-based fungicides before dry weather. Foliar sprays of organic coating agents can also prevent the infection. Always consider an integrated approach with preventive measures together with biological treatments if available. Fungicide applications are important to control late blight, particularly in humid areas. Contact fungicides that coat leaves are effective before infections and do not trigger resistance in the fungi. Fungicides containing mandipropamid, chlorothalonil, fluazinam, or mancozeb can also be used as a preventive treatment. Seed treatment before sowing with fungicides like mancozeb also work.");
-			potato_late_blight_en.setNomClasse("Tomato Late Blight");
+			potato_late_blight_en.setNomClasse("Potato Late Blight");
 			diseaseDao.save(potato_late_blight_en);
 			Stream.of(
 					"https://firebasestorage.googleapis.com/v0/b/nabta-38d6a.appspot.com/o/disease%2Fimage%2F1622766355934?alt=media&token=d21a12f2-5f02-4639-bb72-774881b852ed",

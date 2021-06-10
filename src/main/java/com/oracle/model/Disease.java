@@ -9,26 +9,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 public class Disease {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	@Column(length = 3000)
 	private String nomClasse;
-	@Column(length = 3000)
 	private String nom;
-	@Column(length = 3000)
 	private String nomScientifique;
-	@Column(length = 3000)
+	@Column(length = 65535,columnDefinition="Text")
 	private String symptoms;
-	@Column(length = 3000)
 	private String cycleImage;
-	@Column(length = 3000)
+	@Column(length = 65535,columnDefinition="Text")
 	private String conditions;
-	@Column(length = 3000)
+	@Column(length = 65535,columnDefinition="Text")
 	private String management;
-	@Column(length = 3000)
+	@Column(length = 65535,columnDefinition="Text")
 	private String control;
 	@OneToMany(mappedBy = "disease")
 	private List<Image> images;

@@ -25,6 +25,7 @@ public class NabtaBackendApplication {
 	public CommandLineRunner demo(DiseaseDao diseaseDao, ImageDao imageDao) {
 		return (args) -> {
 			//French
+			//Super
 			Disease potato_early_blight_fr = new Disease();
 			potato_early_blight_fr.setLangue("fr");
 			potato_early_blight_fr.setNom("Mildiou de la pomme de terre");

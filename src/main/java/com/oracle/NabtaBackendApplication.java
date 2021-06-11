@@ -50,6 +50,7 @@ public class NabtaBackendApplication {
 
 			Disease potato_late_blight_fr = new Disease();
 			potato_late_blight_fr.setLangue("fr");
+			potato_late_blight_fr.setNomClasse("Potato Late Blight");
 			potato_late_blight_fr.setNom("Mildiou tardif de la pomme de terre ");
 			potato_late_blight_fr.setNomScientifique("Phytophthora infestans");
 			potato_late_blight_fr.setSymptoms(
@@ -60,8 +61,7 @@ public class NabtaBackendApplication {
 					"     1. Utilisez des graines saines ou des plantes plus tolérantes. \\n\\n2. Assurez-vous que le champ a une bonne ventilation et un sol bien drainé.\\n\\n3. Surveillez les champs et supprimez les plantes infectées et les plantes environnantes.\\n\\n4. Utilisez des rotations de deux à trois ans pour les cultures non hôtes.\\n\\n5. Détruisez les hôtes volontaires dans et autour du terrain.\\n\\n6. Évitez une fertilisation excessive avec de l'azote.\\n\\nn7. Utilisez des fortifiants pour plantes.\\n\\n8. Conservez les tubercules à basse température et avec une bonne ventilation.\\n\\n9. Détruisez les tubercules et les débris végétaux après la récolte en les enterrant à deux pieds de profondeur ou en les nourrissant aux animaux.");
 			potato_late_blight_fr.setControl(
 					"     Appliquer des fongicides à base de cuivre avant le temps sec. Les pulvérisations foliaires d'agents d'enrobage organiques peuvent également prévenir l'infection. Envisagez toujours une approche intégrée avec des mesures préventives ainsi que des traitements biologiques si disponibles. Les applications de fongicides sont importantes pour lutter contre le mildiou, en particulier dans les zones humides. Les fongicides de contact qui recouvrent les feuilles sont efficaces avant les infections et ne déclenchent pas de résistance chez les champignons. Les fongicides contenant du mandipropamide, du chlorothalonil, du fluaziname ou du mancozèbe peuvent également être utilisés comme traitement préventif. Le traitement des semences avant le semis avec des fongicides comme le mancozèbe fonctionne également.");
-			potato_early_blight_fr.setNomClasse("Potato Late Blight");
-			potato_early_blight_fr.setCycleImage("https://firebasestorage.googleapis.com/v0/b/nabta-38d6a.appspot.com/o/disease%2Fimage%2F1623401361272?alt=media&token=aacb746c-3947-4710-8f4e-65818c04d82e");
+			potato_late_blight_fr.setCycleImage("https://firebasestorage.googleapis.com/v0/b/nabta-38d6a.appspot.com/o/disease%2Fimage%2F1623401361272?alt=media&token=aacb746c-3947-4710-8f4e-65818c04d82e");
 			diseaseDao.save(potato_late_blight_fr);
 			Stream.of(
 					"https://firebasestorage.googleapis.com/v0/b/nabta-38d6a.appspot.com/o/disease%2Fimage%2F1622766355934?alt=media&token=d21a12f2-5f02-4639-bb72-774881b852ed",
